@@ -4,14 +4,18 @@ import java.util.ArrayList;
 public class Show {
     String title;
     int duration;
-    String director;
-     ArrayList<Actor> listOfActors = new ArrayList<>();
+    Director director;
+    ArrayList<Actor> listOfActors = new ArrayList<>();
 
-    public Show(String title, int duration, String director, ArrayList<Actor> listOfActors) {
+    public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
         this.duration = duration;
         this.director = director;
-        this.listOfActors = listOfActors;
+        this.listOfActors = new ArrayList<>(listOfActors);
+    }
+
+    public void printDirector() {
+        System.out.println("Режиссер спектакля: " + director.toString());
     }
 
     public void printActors() {

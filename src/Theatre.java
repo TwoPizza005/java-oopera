@@ -15,15 +15,15 @@ public class Theatre {
         String choreographer = "Алекандр Петрович";
 
 
-        ArrayList<Actor> emptyList = new ArrayList<>();
+        ArrayList<Actor> emptyList = new ArrayList<>(); // Пустой лист, который я скопирую при передаче в конструктор
 
         Show regularShow = new Show("Зубенко Михаил Петрович ", 180,
-                director1.name + " " + director1.surname, emptyList);
+                director1, emptyList);
         Opera opera = new Opera("Тоска", 150,
-                director2.name + " " + director2.surname, emptyList,
+                director2, emptyList,
                 musicAuthor, "Либретто оперы Тоска: действие в Риме...", 40);
         Ballet ballet = new Ballet("Лебединое озеро", 130,
-                director1.name + " " + director1.surname, emptyList,
+                director1, emptyList,
                 musicAuthor, "Либретто балета: принц Зигфрид влюбляется в Одетту...", choreographer);
 
 
@@ -37,8 +37,11 @@ public class Theatre {
         System.out.println();
 
         regularShow.printActors();
+        regularShow.printDirector();
         opera.printActors();
+        opera.printDirector();
         ballet.printActors();
+        ballet.printDirector();
         System.out.println();
 
 
