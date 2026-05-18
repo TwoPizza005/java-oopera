@@ -38,7 +38,7 @@ public class Show {
         }
     }
 
-    public void removeActor(Actor newActor, String replaceableActor) {
+    public void replaceActor(Actor newActor, String replaceableActor) {
         for (int i = 0; i < listOfActors.size(); i++) {
             Actor noName = listOfActors.get(i);
             if (noName.surname.equals(replaceableActor)) {

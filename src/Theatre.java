@@ -46,12 +46,12 @@ public class Theatre {
 
 
         System.out.println("Замена актёра (существующий) ");
-        regularShow.removeActor(actor3, "Зубенко");
+        regularShow.replaceActor(actor3, "Зубенко");
         regularShow.printActors();
         System.out.println();
 
         System.out.println(" Попытка замены несуществующего актёра ");
-        ballet.removeActor(actor1, "Пупкин");
+        ballet.replaceActor(actor1, "Пупкин");
         System.out.println();
 
 
